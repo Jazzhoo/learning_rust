@@ -1,3 +1,5 @@
+const MOVE: [(i8 ,i8); 4] = [(-1, 0), (0, 1), (1, 0), (0, -1)];
+
 fn main() {
     let mut x = 5;
     println!("The value of x is: {x}");
@@ -27,4 +29,15 @@ fn main() {
     let (x, y, z) = tup;
 
     println!("The values of x, y, z are now: {x}, {y}, {z}");
+
+
+    for (idx, mv) in MOVE.iter().enumerate() {
+        println!("========={}=========", idx);
+        println!("from normal println!: {:?}", mv);
+        match mv {
+            (x, y) => println!("from match: [x: {}, y: {}]", x, y),
+        }
+        println!("from array like: [x: {}, y: {}]", mv.0, mv.1);
+
+    }
 }
