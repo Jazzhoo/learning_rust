@@ -28,6 +28,8 @@ fn main() {
 
     let (x, y, z) = tup;
 
+    println!("{:?}", tup);
+
     println!("The values of x, y, z are now: {x}, {y}, {z}");
 
 
@@ -40,4 +42,6 @@ fn main() {
         println!("from array like: [x: {}, y: {}]", mv.0, mv.1);
 
     }
+    //let temp_3u8 = 3u8;
+    //println!("temp_3u8 = {}, max: {}", temp_3u8, typeof(temp_3u8));
 }
